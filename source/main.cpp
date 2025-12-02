@@ -5,7 +5,7 @@
 #include<iostream>
 #include<locale.h>
 #include<cstdlib>
-#include<ctime.h>
+//#include<ctime.h>
 
 using namespace std;
 
@@ -14,8 +14,7 @@ void playagn();
 
 int main()
 {
-	system("COLOR E4");
-
+	system("clear");
 	char yesOrno;
 	cout << "Welcome, do you want to roll the dice? (y/n): ";
 	cin >> yesOrno;
@@ -25,7 +24,7 @@ int main()
 	}
 
 	else if (yesOrno == 'n' || yesOrno == 'N') {
-		char out;
+		char outGame;
 		cout << "\nWould you like to leave the game? (y/n): ";
 		cin >> outGame;
 		if (outGame == 'y' || outGame == 'Y') {
@@ -48,7 +47,6 @@ int main()
 
 void play()
 {
-	system("COLOR E4");
 	srand((unsigned)time(0));
 	
 	char startAgain;
@@ -67,13 +65,14 @@ void play()
 	else if(startAgain == 'n' || startAgain == 'N')
 	{
 		cout << "\nLeaving game . . .\n";
+		system("clear");
 		exit(0);
 	}
+
 }
 
 void playagn()
 {
-	system("COLOR E4");
 	char rollAgain;
 
 	cout << "\nPress 'r' to roll the dice: ";
